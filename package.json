@@ -1,5 +1,12 @@
 {
   "dependencies": {
+    "@trybe/eslint-config-frontend": "^1.11.4",
     "prompt-sync": "^4.2.0"
+  },
+  "scripts": {
+    "lint": "eslint ./mod01"
+  },
+  "devDependencies": {
+    "eslint-config-google": "^0.14.0"
   }
 }
