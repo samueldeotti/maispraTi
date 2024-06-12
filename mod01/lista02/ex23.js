@@ -1,3 +1,5 @@
+const { printMatrix } = require('./utils/matrixFunctions');
+
 const createIdentityMatrix = (rows, columns) => {
   const matrix = [];
   for (let i = 0; i < rows; i++) {
@@ -9,13 +11,6 @@ const createIdentityMatrix = (rows, columns) => {
     matrix.push(row);
   }
   return matrix;
-};
-
-const printMatrix = (matrix) => {
-  console.log('Matriz Identidade:');
-  matrix.forEach((row) => {
-    console.log(`[${row.join('][')}]`);
-  });
 };
 
 const identityMatrix = createIdentityMatrix(7, 7);

@@ -1,17 +1,4 @@
-const prompt = require('prompt-sync')();
-
-const createMatrix = (rows, columns) => {
-  const matrix = [];
-  for (let i = 0; i < rows; i++) {
-    const row = [];
-    for (let j = 0; j < columns; j++) {
-      const element = Number(prompt(`Insira o valor da matriz[${i}][${j}]: `));
-      row.push(element);
-    }
-    matrix.push(row);
-  }
-  return matrix;
-};
+const { printMatrix, createMatrix } = require('./utils/matrixFunctions');
 
 const sumRow = (matrix, rowIndex) => matrix[rowIndex]
   .reduce((sum, value) => sum + value, 0);
@@ -30,13 +17,6 @@ const sumDiagonal = (matrix) => {
 const sumAllElements = (matrix) => {
   return matrix
     .reduce((sum, row) => sum + row.reduce((rowSum, value) => rowSum + value, 0), 0);
-};
-
-const printMatrix = (matrix) => {
-  console.log('Matriz:');
-  matrix.forEach((row) => {
-    console.log(`[${row.join('][')}]`);
-  });
 };
 
 const matrix = createMatrix(5, 5);
