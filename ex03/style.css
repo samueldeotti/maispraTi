@@ -9,7 +9,7 @@ body {
 }
 
 header {
-  padding: 20px 40px;
+  padding: 30px 40px;
   width: 100%;
   display: inline-block;
 }
@@ -24,7 +24,7 @@ header h1 {
 }
 
 #logo {
-  top: 15px;
+  top: 25px;
   position: absolute;
 }
 
@@ -80,7 +80,6 @@ a {
 
 main {
   margin-bottom: 48px;
-  /* padding: 0 40px; */
 
 }
 
@@ -98,7 +97,6 @@ main {
   top: 50%;
   transform: translateY(-50%);
   font-size: 30px;
-  color: #3C4C41;
 }
 
 #forward {
@@ -109,18 +107,8 @@ main {
   left: 20px;
 }
 
-#forward::before {
-  content: '';
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 12px;
-  height: 12px;
-  border-top: 3px solid #232323;
-  border-right: 3px solid #232323;
-  transform: translate(-50%, -50%) rotate(45deg);
-}
 
+#forward::before,
 #backward::before {
   content: '';
   position: absolute;
@@ -129,14 +117,93 @@ main {
   width: 12px;
   height: 12px;
   border-top: 3px solid #232323;
+}
+
+#forward::before {
+  border-right: 3px solid #232323;
+  transform: translate(-50%, -50%) rotate(45deg);
+}
+
+#backward::before {
   border-left: 3px solid #232323;
   transform: translate(-50%, -50%) rotate(-45deg);
+}
+
+.content {
+  padding: 0 40px;
+}
+
+#projects-bg {
+  padding: 40px 0;
+  width: 100%;
+  background-color: #C2E8CA;
+}
+
+#projects-content h3 {
+  position: relative;
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  margin-left: 16px;
+}
+
+#projects-content h3::before {
+  content: "";
+  display: block;
+  width: 3px;
+  height: 120%;
+  background-color: #3C4C41;
+  transform: rotate(15deg);
+  position: absolute;
+  top: -3px;
+  left: -12px;
+}
+
+#teste {
+  width: 100%;
+}
+
+#teste div {
+  cursor: pointer;
+  position: relative;
+  display: inline-block;
+  height: 200px;
+  width: calc(33.33% - 20px);
+  background-color: #FFFFFF;
+  border-radius: 12px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+#projects-content div p {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  font-size: 14px;
+  color: white;
+}
+
+#projects-content div img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 12px;
+}
+
+#projects-content div:nth-child(1),
+#projects-content div:nth-child(2) {
+  margin-right: 20px;
+}
+
+
+#data-content {
+  padding-top: 40px;
+  width: 100%;
 }
 
 
 footer {
   width: 100%;
-  padding: 40px 40px;
+  padding: 30px 40px;
   background-color: #232323;
   color: #f3f3f3;
 }
