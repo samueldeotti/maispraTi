@@ -12,10 +12,14 @@
 <script>
   document.addEventListener('DOMContentLoaded', (event) => {
     const modal = document.getElementById("myModal");
-    const openModalBtn = document.getElementById("openModalBtn");
+    const openModalBtn = document.getElementsByClassName("openModalBtn");
     const closeBtn = document.getElementsByClassName("closeBtn")[0];
 
-    openModalBtn.onclick = function () {
+    openModalBtn[0].onclick = function () {
+      modal.style.display = "block";
+    }
+
+    openModalBtn[1].onclick = function () {
       modal.style.display = "block";
     }
 
@@ -78,8 +82,7 @@
     <h1><a href="index.html">rbce <span>Rede brasileira de cooperação em emergências</span></a></h1>
     <nav>
       <ul>
-        <li><a href="index.html">projetos</a></li>
-        <li id="openModalBtn"><a href="#">contato</a></li>
+        <li class="openModalBtn"><a href="#">contato</a></li>
         <li><a href="about.html">quem somos</a></li>
       </ul>
     </nav>
@@ -116,87 +119,104 @@
       <h3>alguns dados importantes</h3>
       <div>
         <div class="teste">
-          <svg width="96" height="96" viewBox="0 0 97 97" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path
-              d="M21.862 21.7C25.9076 21.7 29.7881 23.3044 32.6525 26.1613C35.5169 29.0182 37.1314 32.8944 37.142 36.94V90.42H6.58203V36.94C6.59262 32.8944 8.20715 29.0182 11.0716 26.1613C13.936 23.3044 17.8164 21.7 21.862 21.7Z"
-              stroke="#00923E" stroke-width="6" stroke-miterlimit="10" />
-            <path d="M21.8621 2.58V21.7" stroke="#00923E" stroke-width="6" stroke-miterlimit="10" />
-            <path
-              d="M79.1421 44.5V61.7C79.1315 65.24 77.7206 68.6321 75.2174 71.1353C72.7142 73.6385 69.3221 75.0494 65.7821 75.06C62.2836 75.0079 58.9443 73.5896 56.4777 71.108C54.0112 68.6265 52.613 65.2787 52.5821 61.78V29.3C52.5822 26.7775 52.0822 24.2799 51.1108 21.9519C50.1395 19.6239 48.7161 17.5116 46.9232 15.7372C45.1302 13.9628 43.0031 12.5616 40.6651 11.6146C38.3271 10.6676 35.8245 10.1936 33.3021 10.22H10.3821"
-              stroke="#00923E" stroke-width="6" stroke-miterlimit="10" />
-            <path d="M37.142 75.14H18.022" stroke="#00923E" stroke-width="6" stroke-miterlimit="10" />
-            <path
-              d="M90.582 35.06C90.582 42.42 85.462 44.58 79.142 44.58C72.822 44.58 67.662 42.42 67.662 35.06C67.662 27.7 72.782 17.86 79.142 17.86C85.502 17.86 90.582 27.66 90.582 35.06Z"
-              stroke="#00923E" stroke-width="6" stroke-miterlimit="10" />
+          <svg width="96px" height="96px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+            <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+            <g id="SVGRepo_iconCarrier">
+              <path
+                d="M12 7V12L14.5 13.5M21 12C21 16.9706 16.9706 21 12 21C7.02944 21 3 16.9706 3 12C3 7.02944 7.02944 3 12 3C16.9706 3 21 7.02944 21 12Z"
+                stroke="#00923E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                data-darkreader-inline-stroke="" style="--darkreader-inline-stroke: #66ffa7;"></path>
+            </g>
           </svg>
           <div class="data-conteiner">
-            <h4>56%</h4>
-            <p>Lorem,
-              ipsum dolor sit amet consectetur adipisicing elit. Non consequuntur nam deleniti.</p>
+            <h4>Meta 4x4:</h4>
+            <p>Estabelecemos um tempo máximo de 4 a 8 horas de permanência nos serviços de urgência, garantindo
+              diagnósticos rápidos e início eficaz de tratamentos.</p>
           </div>
         </div>
       </div>
       <div>
         <div class="teste">
-          <svg width="96" height="96" viewBox="0 0 97 97" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M6.58209 25.58V94.3" stroke="#00923E" stroke-width="6" stroke-miterlimit="10" />
-            <path d="M48.5821 56.14H6.58209V71.42H48.5821V56.14Z" stroke="#00923E" stroke-width="6"
-              stroke-miterlimit="10" />
-            <path d="M90.5821 94.3V56.14" stroke="#00923E" stroke-width="6" stroke-miterlimit="10" />
-            <path d="M90.5821 56.14H48.5821V79.06H90.5821V56.14Z" stroke="#00923E" stroke-width="6"
-              stroke-miterlimit="10" />
-            <path d="M90.5821 44.7V56.14" stroke="#00923E" stroke-width="6" stroke-miterlimit="10" />
-            <path d="M52.3821 2.7V25.58" stroke="#00923E" stroke-width="6" stroke-miterlimit="10" />
-            <path d="M40.9421 14.14H63.8621" stroke="#00923E" stroke-width="6" stroke-miterlimit="10" />
-            <path d="M14.2221 33.22L37.1421 56.14" stroke="#00923E" stroke-width="6" stroke-miterlimit="10" />
+          <svg fill="#00923E" height="96" width="96" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg"
+            xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 451.731 451.731" xml:space="preserve"
+            data-darkreader-inline-fill="" style="--darkreader-inline-fill: #007532;">
+            <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+            <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+            <g id="SVGRepo_iconCarrier">
+              <g>
+                <g id="XMLID_103_">
+                  <path id="XMLID_105_"
+                    d="M433.672,326.154H177.59c-15.148,0-27.537-11.877-28.081-27.101c-0.322-9.026-0.178-17.876,0.436-26.702 h-12.401c-3.988-2.034-105.11-53.61-112.544-57.401V104.147c0-6.904-5.596-12.5-12.5-12.5S0,97.243,0,104.147 c0,3.942,0,220.241,0,228.007c0,6.903,5.597,12.5,12.5,12.5h21.786v7.325c0,4.476,3.628,8.104,8.104,8.104h40.652 c4.476,0,8.104-3.628,8.104-8.104v-7.325h272.08v7.325c0,4.476,3.628,8.104,8.104,8.104h40.652c4.476,0,8.104-3.628,8.104-8.104 v-7.325h19.145c6.903,0,12.5-5.597,12.5-12.5v-12.531C446.829,323.727,440.519,326.154,433.672,326.154z">
+                  </path>
+                  <circle id="XMLID_914_" cx="85.551" cy="180.9" r="33.403"></circle>
+                  <path id="XMLID_924_"
+                    d="M132.381,244.115c19.049,7.106,7.955,2.968,19.927,7.434c1.305-8.176,2.98-15.83,4.91-22.958 l-4.474-6.954l48.668,47.045c3.773,3.648,9.286,5.332,14.654,4.155l62.898-13.791c8.678-1.903,14.201-10.485,12.292-19.195 c0-0.002-0.001-0.004-0.002-0.006c-1.861-8.476-10.318-14.207-19.157-12.292c-0.012,0.003-0.024,0.003-0.037,0.006l-54.457,11.94 l0,0c-5.046-4.878-42.21-40.802-47.45-45.867c4.284-8.919,8.642-16.224,12.446-21.9l-20.381-7.603 c-11.864-4.426-24.757,1.807-29.027,13.252c0,0.001-0.001,0.002-0.001,0.002l-14.065,37.703c-0.001,0.004-0.002,0.007-0.004,0.011 C114.82,226.644,120.62,239.727,132.381,244.115z">
+                  </path>
+                  <path id="XMLID_927_"
+                    d="M268.748,212.447c17.364-3.807,33.994,7.54,37.622,24.091c3.72,16.967-6.993,33.875-24.091,37.622 l-62.898,13.791c-14.503,3.18-26.96-4.651-30.98-10.896l-15.946-24.783c-2.342,13.657-3.568,29.016-2.959,46.068 c0.156,4.358,3.732,7.815,8.094,7.815h256.082c3.974,0,7.361-2.881,7.999-6.803l6.24-38.379 c4.691-28.854-12.886-56.527-40.972-64.635c-43.8-12.644-109.12-28.424-162.308-28.424c-12.985,0-25.237,0.939-36.288,3.094 c0,0-10.954,11.253-21.251,33.532l32.966,18.582L268.748,212.447z">
+                  </path>
+                </g>
+              </g>
+            </g>
           </svg>
           <div class="data-conteiner">
-            <h4>56%</h4>
-            <p>Lorem,
-              ipsum dolor sit amet consectetur adipisicing elit. Non consequuntur nam deleniti.</p>
+            <h4>Expansão de Leitos Hospitalares:</h4>
+            <p>Ampliamos a oferta de leitos hospitalares, alcançando 4 leitos de internação para cada mil habitantes,
+              melhorando o acesso ao atendimento hospitalar de qualidade.
+            </p>
           </div>
         </div>
       </div>
       <div>
         <div class="teste">
-          <svg width="96" height="96" viewBox="0 0 97 97" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M6.58209 25.58V94.3" stroke="#00923E" stroke-width="6" stroke-miterlimit="10" />
-            <path d="M48.5821 56.14H6.58209V71.42H48.5821V56.14Z" stroke="#00923E" stroke-width="6"
-              stroke-miterlimit="10" />
-            <path d="M90.5821 94.3V56.14" stroke="#00923E" stroke-width="6" stroke-miterlimit="10" />
-            <path d="M90.5821 56.14H48.5821V79.06H90.5821V56.14Z" stroke="#00923E" stroke-width="6"
-              stroke-miterlimit="10" />
-            <path d="M90.5821 44.7V56.14" stroke="#00923E" stroke-width="6" stroke-miterlimit="10" />
-            <path d="M52.3821 2.7V25.58" stroke="#00923E" stroke-width="6" stroke-miterlimit="10" />
-            <path d="M40.9421 14.14H63.8621" stroke="#00923E" stroke-width="6" stroke-miterlimit="10" />
-            <path d="M14.2221 33.22L37.1421 56.14" stroke="#00923E" stroke-width="6" stroke-miterlimit="10" />
+          <svg width="96" viewBox="0 0 48.00 48.00" xmlns="http://www.w3.org/2000/svg" fill="#00923E"
+            style="--darkreader-inline-fill: #007532; --darkreader-inline-stroke: #66ffa7;" stroke="#00923E"
+            data-darkreader-inline-fill="" data-darkreader-inline-stroke="" stroke-width="0.00048000000000000007">
+            <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+            <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+            <g id="SVGRepo_iconCarrier">
+              <g id="Layer_2" data-name="Layer 2">
+                <g id="invisible_box" data-name="invisible box">
+                  <rect width="48" height="48" fill="none"></rect>
+                </g>
+                <g id="Layer_4" data-name="Layer 4">
+                  <g>
+                    <circle cx="35" cy="22" r="6"></circle>
+                    <path
+                      d="M45.2,33.3a17.4,17.4,0,0,0-20.4,0,1.6,1.6,0,0,0-.8,1.4v5.8A1.6,1.6,0,0,0,25.6,42H44.4A1.6,1.6,0,0,0,46,40.5V34.7A1.6,1.6,0,0,0,45.2,33.3Z">
+                    </path>
+                    <path
+                      d="M26,9H22V4H6V9H2V40a2,2,0,0,0,2,2H20V34.7A5.6,5.6,0,0,1,22.5,30,24.3,24.3,0,0,1,26,28ZM13,34H9V30h4Zm0-6H9V24h4Zm0-6H9V18h4Zm1-6a1,1,0,0,1-1-1V13H11a1,1,0,0,1,0-2h2V9a1,1,0,0,1,2,0v2h2a1,1,0,0,1,0,2H15v2A1,1,0,0,1,14,16Zm5,18H15V30h4Zm0-6H15V24h4Zm0-6H15V18h4Z">
+                    </path>
+                  </g>
+                </g>
+              </g>
+            </g>
           </svg>
           <div class="data-conteiner">
-            <h4>56%</h4>
-            <p>Lorem,
-              ipsum dolor sit amet consectetur adipisicing elit. Non consequuntur nam deleniti.</p>
+            <h4>Capacitação de Profissionais:</h4>
+            <p>Capacitamos mais de 10.000 profissionais de saúde em práticas de atendimento de urgência e emergência,
+              elevando o padrão de cuidado e eficiência no SUS.</p>
           </div>
         </div>
       </div>
       <div>
         <div class="teste">
-          <svg width="96" height="96" viewBox="0 0 97 97" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path
-              d="M21.862 21.7C25.9076 21.7 29.7881 23.3044 32.6525 26.1613C35.5169 29.0182 37.1314 32.8944 37.142 36.94V90.42H6.58203V36.94C6.59262 32.8944 8.20715 29.0182 11.0716 26.1613C13.936 23.3044 17.8164 21.7 21.862 21.7Z"
-              stroke="#00923E" stroke-width="6" stroke-miterlimit="10" />
-            <path d="M21.8621 2.58V21.7" stroke="#00923E" stroke-width="6" stroke-miterlimit="10" />
-            <path
-              d="M79.1421 44.5V61.7C79.1315 65.24 77.7206 68.6321 75.2174 71.1353C72.7142 73.6385 69.3221 75.0494 65.7821 75.06C62.2836 75.0079 58.9443 73.5896 56.4777 71.108C54.0112 68.6265 52.613 65.2787 52.5821 61.78V29.3C52.5822 26.7775 52.0822 24.2799 51.1108 21.9519C50.1395 19.6239 48.7161 17.5116 46.9232 15.7372C45.1302 13.9628 43.0031 12.5616 40.6651 11.6146C38.3271 10.6676 35.8245 10.1936 33.3021 10.22H10.3821"
-              stroke="#00923E" stroke-width="6" stroke-miterlimit="10" />
-            <path d="M37.142 75.14H18.022" stroke="#00923E" stroke-width="6" stroke-miterlimit="10" />
-            <path
-              d="M90.582 35.06C90.582 42.42 85.462 44.58 79.142 44.58C72.822 44.58 67.662 42.42 67.662 35.06C67.662 27.7 72.782 17.86 79.142 17.86C85.502 17.86 90.582 27.66 90.582 35.06Z"
-              stroke="#00923E" stroke-width="6" stroke-miterlimit="10" />
+          <svg width="96" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg" fill="#000000"
+            data-darkreader-inline-fill="" style="--darkreader-inline-fill: #000000;">
+            <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+            <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+            <g id="SVGRepo_iconCarrier">
+              <path fill="#00923E"
+                d="M256 102L20 256l236 154 236-154-236-154zm0 54a100 100 0 0 1 100 100 100 100 0 0 1-.504 10.014c-48.123-36.173-110.506-57.542-168.914-56.409-6.632.13-13.207.566-19.709 1.286A100 100 0 0 1 256 156zm-65.568 71.73c55.59.133 116.403 22.059 161.045 57.979A100 100 0 0 1 256 356a100 100 0 0 1-100-100 100 100 0 0 1 3.545-25.943c10.012-1.593 20.354-2.352 30.887-2.327z"
+                style="--darkreader-inline-fill: #007532;" data-darkreader-inline-fill=""></path>
+            </g>
           </svg>
           <div class="data-conteiner">
-            <h4>56%</h4>
-            <p>Lorem,
-              ipsum dolor sit amet consectetur adipisicing elit. Non consequuntur nam deleniti.</p>
+            <h4>Coalizão Nacional:</h4>
+            <p>Estabelecemos uma coalizão para assegurar tempos de espera clinicamente aceitáveis para diagnósticos e
+              tratamentos, promovendo equidade no acesso e melhores resultados clínicos.</p>
           </div>
         </div>
       </div>
@@ -218,11 +238,10 @@
     </div>
   </main>
   <footer>
-    <div id=" first-div">
+    <div id="first-div">
       <ul>
         <li id="footer-logo">rbce</li>
-        <li><a href="index.html">projetos</a></li>
-        <li><a href="#" onclick="">contato</a></li>
+        <li class="openModalBtn"><a href="#first-div">contato</a></li>
         <li><a href="about.html">quem somos</a></li>
       </ul>
       <ul>
