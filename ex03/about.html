@@ -5,64 +5,200 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="about.css">
   <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
   <title>quem somos</title>
 </head>
 
+<script>
+  document.addEventListener('DOMContentLoaded', (event) => {
+    const modal = document.getElementById("myModal");
+    const openModalBtn = document.getElementsByClassName("openModalBtn");
+    const closeBtn = document.getElementsByClassName("closeBtn")[0];
+
+    openModalBtn[0].onclick = function () {
+      modal.style.display = "block";
+    }
+
+    openModalBtn[1].onclick = function () {
+      modal.style.display = "block";
+    }
+
+    closeBtn.onclick = function () {
+      modal.style.display = "none";
+    }
+
+    window.onclick = function (event) {
+      if (event.target == modal) {
+        modal.style.display = "none";
+      }
+    }
+  });
+
+  function handleSubmit(event) {
+    event.preventDefault();
+    document.getElementById("name").value = '';
+    document.getElementById("email").value = '';
+    document.getElementById("message").value = '';
+
+    alert("Mensagem enviada com sucesso")
+
+    document.getElementById("myModal").style.display = "none";
+
+
+  }
+
+</script>
+
 <body>
-  <header><a href="index.html">
-      <svg id="logo" width="56" height="56" viewBox="0 0 56 56" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <rect x="24.7939" y="12.0614" width="18.8092" height="6.89231" fill="#9BD9A9" />
-        <rect x="30.7787" y="24.9845" width="18.9538" height="6.83969" transform="rotate(-90 30.7787 24.9845)"
-          fill="#9BD9A9" />
-        <rect x="18.3817" y="24.9844" width="18.8092" height="6.89231" fill="#F3FE6B" />
-        <rect x="24.3665" y="37.9075" width="18.9538" height="6.83969" transform="rotate(-90 24.3665 37.9075)"
-          fill="#F3FE6B" />
-        <rect x="5.98474" y="18.0923" width="18.8092" height="6.89231" fill="#9BD9A9" />
-        <rect x="11.9695" y="31.0154" width="18.9538" height="6.83969" transform="rotate(-90 11.9695 31.0154)"
-          fill="#9BD9A9" />
-        <rect y="31.0156" width="18.8092" height="6.89231" fill="#4CBF6C" />
-        <rect x="5.98474" y="43.9387" width="18.9538" height="6.83969" transform="rotate(-90 5.98474 43.9387)"
-          fill="#4CBF6C" />
-        <rect x="11.9695" y="6.03076" width="18.8092" height="6.89231" fill="#4CBF6C" />
-        <rect x="17.9541" y="18.9537" width="18.9538" height="6.83969" transform="rotate(-90 17.9541 18.9537)"
-          fill="#4CBF6C" />
-        <rect x="31.2061" y="31.0156" width="18.8092" height="6.89231" fill="#4CBF6C" />
-        <rect x="37.1908" y="43.9387" width="18.9538" height="6.83969" transform="rotate(-90 37.1908 43.9387)"
-          fill="#4CBF6C" />
-        <rect x="37.1908" y="18.0923" width="18.8092" height="6.89231" fill="#70CB86" />
-        <rect x="43.1757" y="31.0154" width="18.9538" height="6.83969" transform="rotate(-90 43.1757 31.0154)"
-          fill="#70CB86" />
-        <rect x="12.397" y="37.0461" width="18.8092" height="6.89231" fill="#70CB86" />
-        <rect x="18.3817" y="49.9691" width="18.9538" height="6.83969" transform="rotate(-90 18.3817 49.9691)"
-          fill="#70CB86" />
-        <rect x="25.2213" y="43.077" width="18.8092" height="6.89231" fill="#9BD9A9" />
-        <rect x="31.2061" y="56.0001" width="18.9538" height="6.83969" transform="rotate(-90 31.2061 56.0001)"
-          fill="#9BD9A9" />
-      </svg>
-    </a>
+  <header><svg id="logo" width="56" height="56" viewBox="0 0 56 56" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <rect x="24.7939" y="12.0614" width="18.8092" height="6.89231" fill="#9BD9A9" />
+      <rect x="30.7787" y="24.9845" width="18.9538" height="6.83969" transform="rotate(-90 30.7787 24.9845)"
+        fill="#9BD9A9" />
+      <rect x="18.3817" y="24.9844" width="18.8092" height="6.89231" fill="#F3FE6B" />
+      <rect x="24.3665" y="37.9075" width="18.9538" height="6.83969" transform="rotate(-90 24.3665 37.9075)"
+        fill="#F3FE6B" />
+      <rect x="5.98474" y="18.0923" width="18.8092" height="6.89231" fill="#9BD9A9" />
+      <rect x="11.9695" y="31.0154" width="18.9538" height="6.83969" transform="rotate(-90 11.9695 31.0154)"
+        fill="#9BD9A9" />
+      <rect y="31.0156" width="18.8092" height="6.89231" fill="#4CBF6C" />
+      <rect x="5.98474" y="43.9387" width="18.9538" height="6.83969" transform="rotate(-90 5.98474 43.9387)"
+        fill="#4CBF6C" />
+      <rect x="11.9695" y="6.03076" width="18.8092" height="6.89231" fill="#4CBF6C" />
+      <rect x="17.9541" y="18.9537" width="18.9538" height="6.83969" transform="rotate(-90 17.9541 18.9537)"
+        fill="#4CBF6C" />
+      <rect x="31.2061" y="31.0156" width="18.8092" height="6.89231" fill="#4CBF6C" />
+      <rect x="37.1908" y="43.9387" width="18.9538" height="6.83969" transform="rotate(-90 37.1908 43.9387)"
+        fill="#4CBF6C" />
+      <rect x="37.1908" y="18.0923" width="18.8092" height="6.89231" fill="#70CB86" />
+      <rect x="43.1757" y="31.0154" width="18.9538" height="6.83969" transform="rotate(-90 43.1757 31.0154)"
+        fill="#70CB86" />
+      <rect x="12.397" y="37.0461" width="18.8092" height="6.89231" fill="#70CB86" />
+      <rect x="18.3817" y="49.9691" width="18.9538" height="6.83969" transform="rotate(-90 18.3817 49.9691)"
+        fill="#70CB86" />
+      <rect x="25.2213" y="43.077" width="18.8092" height="6.89231" fill="#9BD9A9" />
+      <rect x="31.2061" y="56.0001" width="18.9538" height="6.83969" transform="rotate(-90 31.2061 56.0001)"
+        fill="#9BD9A9" />
+    </svg>
     <h1><a href="index.html">rbce <span>Rede brasileira de cooperação em emergências</span></a></h1>
     <nav>
       <ul>
-        <li><a href="index.html">projetos</a></li>
-        <li><a href="contact.html">contato</a></li>
-        <li><a href="about.html" class="selected-nav">quem somos</a></li>
+        <li class="openModalBtn"><a href="#">contato</a></li>
+        <li><a href="about.html">quem somos</a></li>
       </ul>
     </nav>
   </header>
 
+  <main>
+    <section id="mission">
+      <h2>sobre a RBCE</h2>
+      <div id="img-container">
+        <img src="" alt="org">
+      </div>
+      <p>A RBCE (Rede Brasileira de Cooperação em Emergências) tem como propósito principal melhorar a atenção às
+        urgências e o acesso hospitalar no Brasil. A RBCE busca garantir diagnósticos rápidos, tratamentos eficazes, e
+        equidade no acesso ao atendimento de saúde de qualidade para todos os pacientes.</p>
+    </section>
 
+    <div id="about-bg">
+      <section id="about">
+        <!-- <div id="about-img-container"> -->
+        <img src="https://www.grupoboticario.com.br/wp-content/uploads/2023/05/DSC_3750-500x280.jpg" alt="">
+        <!-- </div> -->
+        <div id="about-content">
+          <h3>Por pessoas e para pessoas</h3>
+          <p>A Rede Brasileira de Cooperação em Emergências (RBCE) surgiu em 2000, nascida do esforço conjunto de
+            profissionais de saúde, gestores públicos e organizações não governamentais, movidos pela urgência de
+            melhorar
+            a
+            atenção às emergências médicas no Brasil. Desde o início, a RBCE teve como propósito transformar e
+            fortalecer
+            o
+            sistema de saúde brasileiro, com foco especial nas urgências e emergências. Fundada há 25 anos, a RBCE tem
+            desempenhado um papel vital na promoção de políticas públicas e na criação de redes de atendimento que
+            garantem
+            um cuidado eficiente, humanizado e universal.
+            Nosso trabalho é guiado pela convicção de que a saúde é um direito fundamental de todos os cidadãos e um
+            dever
+            inalienável do Estado. Atuamos em parceria com sindicatos, movimentos sociais, instituições públicas e a
+            sociedade civil para construir um sistema de saúde que atenda às necessidades de todos os brasileiros com
+            dignidade e qualidade.
 
+          </p>
+        </div>
+      </section>
 
+    </div>
+
+    <section id="team">
+      <h2>nossa equipe</h2>
+      <div id="team-container">
+        <div class="team-member">
+          <div></div>
+          <h3>João Silva</h3>
+          <p>fundador e presidente</p>
+          <a href="#">
+            <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M27 3H5C4.46957 3 3.96086 3.21071 3.58579 3.58579C3.21071 3.96086 3 4.46957 3 5V27C3 27.5304 3.21071 28.0391 3.58579 28.4142C3.96086 28.7893 4.46957 29 5 29H27C27.5304 29 28.0391 28.7893 28.4142 28.4142C28.7893 28.0391 29 27.5304 29 27V5C29 4.46957 28.7893 3.96086 28.4142 3.58579C28.0391 3.21071 27.5304 3 27 3ZM27 27H5V5H27V27ZM12 14V22C12 22.2652 11.8946 22.5196 11.7071 22.7071C11.5196 22.8946 11.2652 23 11 23C10.7348 23 10.4804 22.8946 10.2929 22.7071C10.1054 22.5196 10 22.2652 10 22V14C10 13.7348 10.1054 13.4804 10.2929 13.2929C10.4804 13.1054 10.7348 13 11 13C11.2652 13 11.5196 13.1054 11.7071 13.2929C11.8946 13.4804 12 13.7348 12 14ZM23 17.5V22C23 22.2652 22.8946 22.5196 22.7071 22.7071C22.5196 22.8946 22.2652 23 22 23C21.7348 23 21.4804 22.8946 21.2929 22.7071C21.1054 22.5196 21 22.2652 21 22V17.5C21 16.837 20.7366 16.2011 20.2678 15.7322C19.7989 15.2634 19.163 15 18.5 15C17.837 15 17.2011 15.2634 16.7322 15.7322C16.2634 16.2011 16 16.837 16 17.5V22C16 22.2652 15.8946 22.5196 15.7071 22.7071C15.5196 22.8946 15.2652 23 15 23C14.7348 23 14.4804 22.8946 14.2929 22.7071C14.1054 22.5196 14 22.2652 14 22V14C14.0012 13.7551 14.0923 13.5191 14.256 13.3369C14.4197 13.1546 14.6446 13.0388 14.888 13.0114C15.1314 12.9839 15.3764 13.0468 15.5765 13.188C15.7767 13.3292 15.918 13.539 15.9738 13.7775C16.6502 13.3186 17.4389 13.0526 18.2552 13.0081C19.0714 12.9637 19.8844 13.1424 20.6067 13.5251C21.329 13.9078 21.9335 14.48 22.3551 15.1803C22.7768 15.8806 22.9997 16.6825 23 17.5ZM12.5 10.5C12.5 10.7967 12.412 11.0867 12.2472 11.3334C12.0824 11.58 11.8481 11.7723 11.574 11.8858C11.2999 11.9994 10.9983 12.0291 10.7074 11.9712C10.4164 11.9133 10.1491 11.7704 9.93934 11.5607C9.72956 11.3509 9.5867 11.0836 9.52882 10.7926C9.47094 10.5017 9.50065 10.2001 9.61418 9.92597C9.72771 9.65189 9.91997 9.41762 10.1666 9.2528C10.4133 9.08797 10.7033 9 11 9C11.3978 9 11.7794 9.15804 12.0607 9.43934C12.342 9.72064 12.5 10.1022 12.5 10.5Z"
+                fill="#232323" />
+            </svg>
+
+          </a>
+        </div>
+        <div class="team-member">
+          <div></div>
+          <h3>Maria Santos</h3>
+          <p>vice-presidente</p>
+          <a href="#">
+            <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M27 3H5C4.46957 3 3.96086 3.21071 3.58579 3.58579C3.21071 3.96086 3 4.46957 3 5V27C3 27.5304 3.21071 28.0391 3.58579 28.4142C3.96086 28.7893 4.46957 29 5 29H27C27.5304 29 28.0391 28.7893 28.4142 28.4142C28.7893 28.0391 29 27.5304 29 27V5C29 4.46957 28.7893 3.96086 28.4142 3.58579C28.0391 3.21071 27.5304 3 27 3ZM27 27H5V5H27V27ZM12 14V22C12 22.2652 11.8946 22.5196 11.7071 22.7071C11.5196 22.8946 11.2652 23 11 23C10.7348 23 10.4804 22.8946 10.2929 22.7071C10.1054 22.5196 10 22.2652 10 22V14C10 13.7348 10.1054 13.4804 10.2929 13.2929C10.4804 13.1054 10.7348 13 11 13C11.2652 13 11.5196 13.1054 11.7071 13.2929C11.8946 13.4804 12 13.7348 12 14ZM23 17.5V22C23 22.2652 22.8946 22.5196 22.7071 22.7071C22.5196 22.8946 22.2652 23 22 23C21.7348 23 21.4804 22.8946 21.2929 22.7071C21.1054 22.5196 21 22.2652 21 22V17.5C21 16.837 20.7366 16.2011 20.2678 15.7322C19.7989 15.2634 19.163 15 18.5 15C17.837 15 17.2011 15.2634 16.7322 15.7322C16.2634 16.2011 16 16.837 16 17.5V22C16 22.2652 15.8946 22.5196 15.7071 22.7071C15.5196 22.8946 15.2652 23 15 23C14.7348 23 14.4804 22.8946 14.2929 22.7071C14.1054 22.5196 14 22.2652 14 22V14C14.0012 13.7551 14.0923 13.5191 14.256 13.3369C14.4197 13.1546 14.6446 13.0388 14.888 13.0114C15.1314 12.9839 15.3764 13.0468 15.5765 13.188C15.7767 13.3292 15.918 13.539 15.9738 13.7775C16.6502 13.3186 17.4389 13.0526 18.2552 13.0081C19.0714 12.9637 19.8844 13.1424 20.6067 13.5251C21.329 13.9078 21.9335 14.48 22.3551 15.1803C22.7768 15.8806 22.9997 16.6825 23 17.5ZM12.5 10.5C12.5 10.7967 12.412 11.0867 12.2472 11.3334C12.0824 11.58 11.8481 11.7723 11.574 11.8858C11.2999 11.9994 10.9983 12.0291 10.7074 11.9712C10.4164 11.9133 10.1491 11.7704 9.93934 11.5607C9.72956 11.3509 9.5867 11.0836 9.52882 10.7926C9.47094 10.5017 9.50065 10.2001 9.61418 9.92597C9.72771 9.65189 9.91997 9.41762 10.1666 9.2528C10.4133 9.08797 10.7033 9 11 9C11.3978 9 11.7794 9.15804 12.0607 9.43934C12.342 9.72064 12.5 10.1022 12.5 10.5Z"
+                fill="#232323" />
+            </svg>
+
+          </a>
+        </div>
+        <div class="team-member">
+          <div></div>
+          <h3>Pedro Oliveira</h3>
+          <p>diretor financeiro</p>
+          <a href="#">
+            <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M27 3H5C4.46957 3 3.96086 3.21071 3.58579 3.58579C3.21071 3.96086 3 4.46957 3 5V27C3 27.5304 3.21071 28.0391 3.58579 28.4142C3.96086 28.7893 4.46957 29 5 29H27C27.5304 29 28.0391 28.7893 28.4142 28.4142C28.7893 28.0391 29 27.5304 29 27V5C29 4.46957 28.7893 3.96086 28.4142 3.58579C28.0391 3.21071 27.5304 3 27 3ZM27 27H5V5H27V27ZM12 14V22C12 22.2652 11.8946 22.5196 11.7071 22.7071C11.5196 22.8946 11.2652 23 11 23C10.7348 23 10.4804 22.8946 10.2929 22.7071C10.1054 22.5196 10 22.2652 10 22V14C10 13.7348 10.1054 13.4804 10.2929 13.2929C10.4804 13.1054 10.7348 13 11 13C11.2652 13 11.5196 13.1054 11.7071 13.2929C11.8946 13.4804 12 13.7348 12 14ZM23 17.5V22C23 22.2652 22.8946 22.5196 22.7071 22.7071C22.5196 22.8946 22.2652 23 22 23C21.7348 23 21.4804 22.8946 21.2929 22.7071C21.1054 22.5196 21 22.2652 21 22V17.5C21 16.837 20.7366 16.2011 20.2678 15.7322C19.7989 15.2634 19.163 15 18.5 15C17.837 15 17.2011 15.2634 16.7322 15.7322C16.2634 16.2011 16 16.837 16 17.5V22C16 22.2652 15.8946 22.5196 15.7071 22.7071C15.5196 22.8946 15.2652 23 15 23C14.7348 23 14.4804 22.8946 14.2929 22.7071C14.1054 22.5196 14 22.2652 14 22V14C14.0012 13.7551 14.0923 13.5191 14.256 13.3369C14.4197 13.1546 14.6446 13.0388 14.888 13.0114C15.1314 12.9839 15.3764 13.0468 15.5765 13.188C15.7767 13.3292 15.918 13.539 15.9738 13.7775C16.6502 13.3186 17.4389 13.0526 18.2552 13.0081C19.0714 12.9637 19.8844 13.1424 20.6067 13.5251C21.329 13.9078 21.9335 14.48 22.3551 15.1803C22.7768 15.8806 22.9997 16.6825 23 17.5ZM12.5 10.5C12.5 10.7967 12.412 11.0867 12.2472 11.3334C12.0824 11.58 11.8481 11.7723 11.574 11.8858C11.2999 11.9994 10.9983 12.0291 10.7074 11.9712C10.4164 11.9133 10.1491 11.7704 9.93934 11.5607C9.72956 11.3509 9.5867 11.0836 9.52882 10.7926C9.47094 10.5017 9.50065 10.2001 9.61418 9.92597C9.72771 9.65189 9.91997 9.41762 10.1666 9.2528C10.4133 9.08797 10.7033 9 11 9C11.3978 9 11.7794 9.15804 12.0607 9.43934C12.342 9.72064 12.5 10.1022 12.5 10.5Z"
+                fill="#232323" />
+            </svg>
+
+          </a>
+        </div>
+      </div>
+
+    </section>
+
+    <div id="myModal" class="modal">
+      <div class="modal-content">
+        <span class="closeBtn">&times;</span>
+        <form action="" onsubmit="handleSubmit(event)">
+          <label for="name">Nome:</label>
+          <input type="text" id="name" name="name" required placeholder="João">
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" required placeholder="joao@email.com">
+          <label for="message">Mensagem:</label>
+          <textarea name="message" id="message" cols="30" rows="10" required placeholder="Sua mensagem..."></textarea>
+          <button type="submit">Enviar</button>
+        </form>
+      </div>
+    </div>
+  </main>
 
 
   <footer>
     <div id="first-div">
       <ul>
         <li id="footer-logo">rbce</li>
-        <li><a href="index.html">projetos</a></li>
-        <li><a href="about.html">contato</a></li>
-        <li><a href="contact.html">quem somos</a></li>
+        <li class="openModalBtn"><a href="#first-div">contato</a></li>
+        <li><a href="about.html">quem somos</a></li>
       </ul>
       <ul>
         <li><a href="https://www.facebook.com/" target="_blank"><svg width="30" height="30" viewBox="0 0 40 40"
