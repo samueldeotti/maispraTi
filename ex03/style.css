@@ -134,7 +134,7 @@ main {
 }
 
 #projects-bg {
-  padding: 40px 0;
+  padding: 60px 0;
   width: 100%;
   background-color: #C2E8CA;
 }
@@ -143,7 +143,7 @@ main {
   position: relative;
   font-size: 20px;
   font-weight: bold;
-  margin-bottom: 20px;
+  margin-bottom: 60px;
   margin-left: 16px;
 }
 
@@ -161,6 +161,7 @@ main {
 
 #teste {
   width: 100%;
+  margin-bottom: 20px;
 }
 
 #teste div {
@@ -196,10 +197,65 @@ main {
 
 
 #data-content {
-  padding-top: 40px;
+  padding-top: 60px;
+  padding-bottom: 60px;
   width: 100%;
 }
 
+#data-content h3 {
+  position: relative;
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 60px;
+  margin-left: 16px;
+}
+
+#data-content h3::before {
+  content: "";
+  display: block;
+  width: 3px;
+  height: 120%;
+  background-color: #3C4C41;
+  transform: rotate(15deg);
+  position: absolute;
+  top: -3px;
+  left: -12px;
+}
+
+#data-content>div {
+  display: inline-block;
+  width: calc(50% - 20px);
+  padding: 40px;
+  border: 2px solid #00923E;
+  border-radius: 16px;
+  box-shadow: 0 4px 4px -2px rgba(0, 0, 0, 0.3);
+}
+
+#data-content div:nth-child(1),
+#data-content div:nth-child(2) {
+  margin-bottom: 20px;
+}
+
+#data-content div:nth-child(even) {
+  margin-right: 20px;
+}
+
+#data-content div h4 {
+  font-size: 16px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.teste {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+
+.data-conteiner {
+  display: inline-block;
+  width: 100%;
+}
 
 footer {
   width: 100%;
@@ -237,9 +293,6 @@ footer ul:nth-child(2) {
   float: right;
 }
 
-#second-div {
-  text-align: center;
-}
 
 #text {
   margin-top: -20px;
