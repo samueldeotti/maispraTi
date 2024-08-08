@@ -26,7 +26,7 @@ import MovieSearchEngine from './pages/MovieSearch/MovieSearchEngine';
 import TodoApp from './pages/TodoList/TodoApp';
 import QuizApp from './pages/Quiz/QuizApp';
 import LanguageTranslator from './pages/Translator/LanguageTranslator';
-import Login from './pages/Login/Login';
+import Login from './pages/Login/Login.jsx';
 import './App.css';
 import 'react-responsive-carousel/lib/styles/carousel.min.css';
 
