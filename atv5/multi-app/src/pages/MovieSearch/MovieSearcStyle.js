@@ -1,26 +1,5 @@
 import styled from 'styled-components'; // Importa styled-components para estilizar os componentes
 
-// Define o estilo do container principal
-export const MovieContainer = styled.div`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 40px;
-  background: #fff;
-  border-radius: 15px;
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
-  max-width: 800px;
-  margin: 50px auto;
-`;
-
-// Define o estilo do título
-export const MovieTitle = styled.h2`
-  color: #333;
-  margin-bottom: 20px;
-  font-size: 24px;
-  text-align: center;
-`;
-
 // Define o estilo do campo de entrada
 export const MovieInput = styled.input`
   margin-bottom: 20px;

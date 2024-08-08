@@ -1,7 +1,8 @@
 import { useState } from 'react'; // Importa o hook useState do React
 import axios from 'axios'; // Importa a biblioteca axios para fazer requisições HTTP
 import { MovieButton, MovieCard,
-  MovieContainer, MovieInput, MoviesContainer, MovieTitle } from './MovieSearcStyle';
+  MovieInput, MoviesContainer } from './MovieSearcStyle';
+import { Container, Title } from '../QRCode/QRCodeStyle';
 
 // Componente principal MovieSearchEngine
 function MovieSearchEngine() {
@@ -19,8 +20,8 @@ function MovieSearchEngine() {
   };
 
   return (
-    <MovieContainer>
-      <MovieTitle>Movie Search Engine</MovieTitle>
+    <Container maxWidth="800px">
+      <Title>Movie Search Engine</Title>
       <MovieInput
         type="text"
         value={ query } // Valor do campo de entrada é ligado ao estado query
@@ -45,7 +46,7 @@ function MovieSearchEngine() {
           </MovieCard>
         ))}
       </MoviesContainer>
-    </MovieContainer>
+    </Container>
   );
 }
 

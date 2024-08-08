@@ -1,6 +1,7 @@
 // Importa o hook useState da biblioteca React para gerenciar o estado do componente.
 import { useState } from 'react';
-import { OptionButton, Question, QuizContainer, QuizTitle, Score } from './QuizStyle';
+import { OptionButton, Question, Score } from './QuizStyle';
+import { Container, Title } from '../QRCode/QRCodeStyle';
 
 export default function QuizApp() {
   // Usa o hook useState para criar variáveis de estado para a pontuação e a pergunta atual.
@@ -34,8 +35,8 @@ export default function QuizApp() {
 
   // Retorna o JSX que define o layout e comportamento do componente.
   return (
-    <QuizContainer>
-      <QuizTitle>Quiz App</QuizTitle>
+    <Container maxWidth="500px">
+      <Title>Quiz App</Title>
       {' '}
       {/* Exibe o título do aplicativo de quiz */}
       {currentQuestion < questions.length ? ( // Verifica se ainda há perguntas para responder.
@@ -58,6 +59,6 @@ export default function QuizApp() {
           {score}
         </Score> /* Exibe a pontuação final após responder todas as perguntas */
       )}
-    </QuizContainer>
+    </Container>
   );
 }

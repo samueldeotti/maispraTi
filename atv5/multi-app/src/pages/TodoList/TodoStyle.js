@@ -1,29 +1,5 @@
 import styled from 'styled-components';
 
-// Cria um componente estilizado chamado Container usando styled-components.
-// Esse componente estiliza uma <div> com flexbox para centralizar o conteúdo e adicionar padding, bordas e sombras.
-export const TodoContainer = styled.div`
-  display: flex; // Define o layout como flexbox.
-  flex-direction: column; // Organiza os itens em uma coluna.
-  align-items: center; // Alinha os itens no centro horizontalmente.
-  justify-content: center; // Alinha os itens no centro verticalmente.
-  padding: 40px; // Adiciona padding de 40px ao redor do conteúdo.
-  background: #fff; // Define o fundo como branco.
-  border-radius: 15px; // Adiciona bordas arredondadas de 15px.
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); 
-  max-width: 500px; // Define a largura máxima como 500px.
-  margin: 50px auto; 
-`;
-
-// Cria um componente estilizado chamado Title usando styled-components.
-// Esse componente estiliza um <h2> com cor, margem, tamanho da fonte e alinhamento.
-export const TodoTitle = styled.h2`
-  color: #333; // Define a cor do texto como um tom escuro de cinza.
-  margin-bottom: 20px; // Adiciona uma margem de 20px abaixo do título.
-  font-size: 24px; // Define o tamanho da fonte como 24px.
-  text-align: center; // Alinha o texto no centro horizontalmente.
-`;
-
 // Cria um componente estilizado chamado Input usando styled-components.
 // Esse componente estiliza um <input> com padding, borda, bordas arredondadas, e sombra interna.
 export const TodoInput = styled.input`

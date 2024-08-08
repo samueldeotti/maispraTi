@@ -1,7 +1,8 @@
 import { useState } from 'react';
 import axios from 'axios';
-import { Button, Container, Input,
-  Label, Select, Title, TranslatedText } from './LanguageTranslatorStyle';
+import { Button, Input,
+  Label, Select, TranslatedText } from './LanguageTranslatorStyle';
+import { Container, Title } from '../QRCode/QRCodeStyle';
 
 export default function LanguageTranslator() {
   const [text, setText] = useState('');
@@ -24,7 +25,7 @@ export default function LanguageTranslator() {
   };
 
   return (
-    <Container>
+    <Container maxWidth="600px">
       <Title>Language Translator</Title>
       <div>
         <Label>Source Language:</Label>

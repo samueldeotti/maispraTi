@@ -1,6 +1,7 @@
 import { useState } from 'react'; // Importa o hook useState do React
 import axios from 'axios';
-import { IpButton, IpContainer, IpInput, IpResultsContainer, IpTitle } from './IpStyle';
+import { IpButton, IpInput, IpResultsContainer } from './IpStyle';
+import { Container, Title } from '../QRCode/QRCodeStyle';
 // Importa a biblioteca axios para fazer requisições HTTP
 
 // Componente principal IPAddressFinder
@@ -20,8 +21,8 @@ function IPAddressFinder() {
   };
 
   return (
-    <IpContainer>
-      <IpTitle>IP Address Finder</IpTitle>
+    <Container maxWidth="400px">
+      <Title>IP Address Finder</Title>
       <IpInput
         type="text"
         value={ ip } // Valor do campo de entrada é ligado ao estado ip
@@ -51,7 +52,7 @@ function IPAddressFinder() {
           </p>
         </IpResultsContainer>
       )}
-    </IpContainer>
+    </Container>
   );
 }
 

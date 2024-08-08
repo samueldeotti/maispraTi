@@ -3,7 +3,8 @@ import { useState, useEffect } from 'react';
 // Importa a biblioteca axios para fazer requisições HTTP.
 import axios from 'axios';
 import { TaskItem, TaskList,
-  TodoButton, TodoContainer, TodoEditInput, TodoInput, TodoTitle } from './TodoStyle';
+  TodoButton, TodoEditInput, TodoInput } from './TodoStyle';
+import { Container, Title } from '../QRCode/QRCodeStyle';
 // Importa a biblioteca styled-components para criar componentes estilizados.
 
 // Define a URL da API que será usada para obter, adicionar, editar e excluir tarefas.
@@ -63,8 +64,8 @@ function TodoApp() {
 
   // Retorna o JSX que define o layout e comportamento do componente.
   return (
-    <TodoContainer>
-      <TodoTitle>Todo App</TodoTitle>
+    <Container maxWidth="500px">
+      <Title>Todo App</Title>
       {' '}
       {/* Exibe o título do aplicativo de tarefas */}
       <TodoInput
@@ -96,7 +97,7 @@ function TodoApp() {
           </TaskItem>
         ))}
       </TaskList>
-    </TodoContainer>
+    </Container>
   );
 }
 
