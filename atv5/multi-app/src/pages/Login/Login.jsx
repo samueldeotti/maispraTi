@@ -1,15 +1,18 @@
 import { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import { LoginContainer, LoginForm, LoginInput } from './Login';
-import { Button } from '../UtilsStyle';
+import { Button, Title } from '../UtilsStyle';
 
-function Login({ onLogin }) {
+function Login() {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
+
+  const navigate = useNavigate();
 
   const handleSubmit = (e) => {
     e.preventDefault();
     if (username === 'admin' && password === 'password') {
-      onLogin();
+      navigate('/home');
     } else {
       alert('Invalid credentials');
     }
@@ -18,7 +21,7 @@ function Login({ onLogin }) {
   return (
     <LoginContainer>
       <LoginForm onSubmit={ handleSubmit }>
-        <h2>Login</h2>
+        <Title>Login</Title>
         <LoginInput
           type="text"
           value={ username }
