@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import axios from 'axios';
-import { Button, Label, Select, TranslatedText } from './LanguageTranslatorStyle';
-import { Container, Input, Title } from '../UtilsStyle';
+import { Label, Select, TranslatedText } from './LanguageTranslatorStyle';
+import { Button, Container, Input, Title } from '../UtilsStyle';
 
 export default function LanguageTranslator() {
   const [text, setText] = useState('');

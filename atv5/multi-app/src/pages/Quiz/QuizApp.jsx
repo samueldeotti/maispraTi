@@ -1,6 +1,6 @@
 import { useState } from 'react';
-import { OptionButton, Question, Score } from './QuizStyle';
-import { Container, Title } from '../UtilsStyle';
+import { Question, Score } from './QuizStyle';
+import { Button, Container, Title } from '../UtilsStyle';
 
 export default function QuizApp() {
   const [score, setScore] = useState(0);
@@ -33,12 +33,12 @@ export default function QuizApp() {
         <div>
           <Question>{questions[currentQuestion].question}</Question>
           {questions[currentQuestion].options.map((option) => (
-            <OptionButton
+            <Button
               key={ option }
               onClick={ () => handleAnswer(option) }
             >
               {option}
-            </OptionButton>
+            </Button>
           ))}
         </div>
       ) : (

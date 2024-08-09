@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import axios from 'axios';
-import { TaskItem, TaskList, TodoButton, TodoEditInput } from './TodoStyle';
-import { Container, Input, Title } from '../UtilsStyle';
+import { TaskItem, TaskList, TodoEditInput } from './TodoStyle';
+import { Button, Container, Input, Title } from '../UtilsStyle';
 
 const API_URL = 'http://localhost:5000/tasks';
 
@@ -58,7 +58,7 @@ function TodoApp() {
         onChange={ (e) => setTask(e.target.value) }
         placeholder="Add a new task"
       />
-      <TodoButton onClick={ addTask }>Add Task</TodoButton>
+      <Button onClick={ addTask }>Add Task</Button>
       <TaskList>
         {tasks.map((task) => (
           <TaskItem key={ task.id }>

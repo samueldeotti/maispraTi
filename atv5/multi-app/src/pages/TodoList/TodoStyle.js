@@ -1,23 +1,5 @@
 import styled from 'styled-components';
 
-// Cria um componente estilizado chamado Button usando styled-components.
-// Esse componente estiliza um <button> com padding, cor de fundo, cor do texto, bordas e efeitos de transição.
-export const TodoButton = styled.button`
-  padding: 12px 20px; // Adiciona padding de 12px verticalmente e 20px horizontalmente.
-  background-color: #007bff; // Define a cor de fundo como azul.
-  color: white; // Define a cor do texto como branco.
-  border: none; // Remove a borda padrão do botão.
-  border-radius: 5px; // Adiciona bordas arredondadas de 5px.
-  cursor: pointer; // Define o cursor como uma mão ao passar sobre o botão.
-  font-size: 16px; // Define o tamanho da fonte como 16px.
-  transition: background-color 0.3s; // Adiciona uma transição suave para a cor de fundo.
-  margin-bottom: 20px; // Adiciona uma margem de 20px abaixo do botão.
-
-  &:hover { // Aplica estilos ao botão quando o cursor está sobre ele.
-    background-color: #0056b3; // Muda a cor de fundo para um tom mais escuro de azul.
-  }
-`;
-
 // Cria um componente estilizado chamado TaskList usando styled-components.
 // Esse componente estiliza uma <ul> para listar as tarefas sem estilo de lista padrão.
 export const TaskList = styled.ul`

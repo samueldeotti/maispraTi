@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import axios from 'axios';
-import { IpButton, IpResultsContainer } from './IpStyle';
-import { Container, Input, Title } from '../UtilsStyle';
+import { IpResultsContainer } from './IpStyle';
+import { Button, Container, Input, Title } from '../UtilsStyle';
 
 function IPAddressFinder() {
   const [ip, setIp] = useState('');
@@ -26,8 +26,7 @@ function IPAddressFinder() {
         onChange={ (e) => setIp(e.target.value) }
         placeholder="Enter IP address"
       />
-      <IpButton onClick={ findIP }>Find IP</IpButton>
-      {' '}
+      <Button onClick={ findIP }>Find IP</Button>
       {ipData && (
         <IpResultsContainer>
           <p>

@@ -1,5 +1,6 @@
 import { useState } from 'react';
-import { LoginButton, LoginContainer, LoginForm, LoginInput } from './Login';
+import { LoginContainer, LoginForm, LoginInput } from './Login';
+import { Button } from '../UtilsStyle';
 
 function Login({ onLogin }) {
   const [username, setUsername] = useState('');
@@ -30,7 +31,7 @@ function Login({ onLogin }) {
           onChange={ (e) => setPassword(e.target.value) }
           placeholder="Password"
         />
-        <LoginButton type="submit">Login</LoginButton>
+        <Button type="submit">Login</Button>
       </LoginForm>
     </LoginContainer>
   );

@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import axios from 'axios';
-import { MovieButton, MovieCard, MoviesContainer } from './MovieSearcStyle';
-import { Container, Input, Title } from '../UtilsStyle';
+import { MovieCard, MoviesContainer } from './MovieSearcStyle';
+import { Button, Container, Input, Title } from '../UtilsStyle';
 
 function MovieSearchEngine() {
   const [query, setQuery] = useState('');
@@ -25,8 +25,7 @@ function MovieSearchEngine() {
         onChange={ (e) => setQuery(e.target.value) }
         placeholder="Search for a movie"
       />
-      <MovieButton onClick={ searchMovies }>Search</MovieButton>
-      {' '}
+      <Button onClick={ searchMovies }>Search</Button>
       <MoviesContainer>
         {movies && movies.map((movie) => (
           <MovieCard key={ movie.imdbID }>
