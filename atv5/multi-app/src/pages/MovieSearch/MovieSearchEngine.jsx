@@ -8,11 +8,15 @@ function MovieSearchEngine() {
   const [movies, setMovies] = useState([]);
 
   const searchMovies = async () => {
+    if (!query) {
+      alert('Please enter a movie title.');
+      return;
+    }
     try {
       const response = await axios.get(`http://www.omdbapi.com/?s=${query}&apikey=403abbfe`);
       setMovies(response.data.Search);
     } catch (error) {
-      console.error('Error fetching movie data:', error);
+      alert('Error fetching movie data:', error);
     }
   };
 
