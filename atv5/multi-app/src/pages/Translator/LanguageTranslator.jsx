@@ -6,8 +6,17 @@ import { Button, Container, Input, Title } from '../UtilsStyle';
 export default function LanguageTranslator() {
   const [text, setText] = useState('');
   const [translatedText, setTranslatedText] = useState('');
-  const [sourceLang, setSourceLang] = useState('en');
-  const [targetLang, setTargetLang] = useState('es');
+
+  const languages = [
+    { code: 'en', name: 'English' },
+    { code: 'pt', name: 'Portuguese' },
+    { code: 'es', name: 'Spanish' },
+    { code: 'fr', name: 'French' },
+    { code: 'de', name: 'German' },
+    { code: 'it', name: 'Italian' },
+  ];
+  const [sourceLang, setSourceLang] = useState(languages[0].code);
+  const [targetLang, setTargetLang] = useState(languages[1].code);
 
   const translateText = async () => {
     try {
@@ -29,23 +38,23 @@ export default function LanguageTranslator() {
       <div>
         <Label>Source Language:</Label>
         <Select value={ sourceLang } onChange={ (e) => setSourceLang(e.target.value) }>
-          <option value="en">English</option>
-          <option value="es">Spanish</option>
-          <option value="fr">French</option>
-          <option value="de">German</option>
-          <option value="it">Italian</option>
-          <option value="pt">Portuguese</option>
+
+          {languages.map((language) => (
+            <option key={ language.code } value={ language.code }>
+              {language.name}
+            </option>
+          ))}
+
         </Select>
       </div>
       <div>
         <Label>Target Language:</Label>
         <Select value={ targetLang } onChange={ (e) => setTargetLang(e.target.value) }>
-          <option value="en">English</option>
-          <option value="es">Spanish</option>
-          <option value="fr">French</option>
-          <option value="de">German</option>
-          <option value="it">Italian</option>
-          <option value="pt">Portuguese</option>
+          {languages.map((language) => (
+            <option key={ language.code } value={ language.code }>
+              {language.name}
+            </option>
+          ))}
         </Select>
       </div>
       <Input
