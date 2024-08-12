@@ -3,8 +3,6 @@ import axios from 'axios';
 import { TaskItem, TaskList, TodoEditInput } from './TodoStyle';
 import { Button, Container, Input, Title } from '../UtilsStyle';
 
-const API_URL = 'http://localhost:3000/tasks';
-
 function TodoApp() {
   const [task, setTask] = useState('');
   const [tasks, setTasks] = useState([]);
