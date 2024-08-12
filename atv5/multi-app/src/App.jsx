@@ -17,14 +17,13 @@ export default function App() {
       <Route path="/" element={ <Login /> } />
 
       <Route path="/home" element={ <Layout /> }>
-
         <Route index element={ <Home /> } />
-        <Route path="QRCodeGenerator" element={ <QRCodeGenarator /> } />
-        <Route path="IPAddressFinder" element={ <IPAddressFinder /> } />
-        <Route path="MovieSearchEngine" element={ <MovieSearchEngine /> } />
-        <Route path="TodoApp" element={ <TodoApp /> } />
-        <Route path="QuizApp" element={ <QuizApp /> } />
-        <Route path="LanguageTranslator" element={ <LanguageTranslator /> } />
+        <Route path="/home/QRCodeGenerator" element={ <QRCodeGenarator /> } />
+        <Route path="/home/IPAddressFinder" element={ <IPAddressFinder /> } />
+        <Route path="/home/MovieSearchEngine" element={ <MovieSearchEngine /> } />
+        <Route path="/home/TodoApp" element={ <TodoApp /> } />
+        <Route path="/home/QuizApp" element={ <QuizApp /> } />
+        <Route path="/home/LanguageTranslator" element={ <LanguageTranslator /> } />
       </Route>
 
     </Routes>

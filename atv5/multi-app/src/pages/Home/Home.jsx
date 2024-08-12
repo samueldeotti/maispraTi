@@ -243,27 +243,27 @@ function Home() {
       ) : (
         <>
           <NavBar isOpen={ isNavBarOpen }>
-            <StyledLink to="home/QRCodeGenerator">
+            <StyledLink to="QRCodeGenerator">
               <FaQrcode />
               QR Code Generator
             </StyledLink>
-            <StyledLink to="home/IPAddressFinder">
+            <StyledLink to="IPAddressFinder">
               <FaNetworkWired />
               IP Address Finder
             </StyledLink>
-            <StyledLink to="home/MovieSearchEngine">
+            <StyledLink to="MovieSearchEngine">
               <FaSearch />
               Movie Search
             </StyledLink>
-            <StyledLink to="home/TodoApp">
+            <StyledLink to="TodoApp">
               <FaTasks />
               Todo App
             </StyledLink>
-            <StyledLink to="home/QuizApp">
+            <StyledLink to="QuizApp">
               <FaRegQuestionCircle />
               Quiz App
             </StyledLink>
-            <StyledLink to="home/LanguageTranslator">
+            <StyledLink to="LanguageTranslator">
               <FaGlobeAmericas />
               Translator
             </StyledLink>
@@ -298,33 +298,33 @@ function Home() {
                 >
                   <CarouselItem>
                     <h2>QR Code Generator</h2>
-                    <StyledLink to="home/QRCodeGenerator">
+                    <StyledLink to="QRCodeGenerator">
                       Acessar
                     </StyledLink>
                   </CarouselItem>
                   <CarouselItem>
                     <h2>IP Address Finder</h2>
-                    <StyledLink to="home/IPAddressFinder">
+                    <StyledLink to="IPAddressFinder">
                       Acessar
                     </StyledLink>
                   </CarouselItem>
                   <CarouselItem>
                     <h2>Movie Search Engine</h2>
                     <StyledLink
-                      to="home/MovieSearchEngine"
+                      to="MovieSearchEngine"
                     >
                       Acessar
                     </StyledLink>
                   </CarouselItem>
                   <CarouselItem>
                     <h2>Todo App</h2>
-                    <StyledLink to="home/TodoApp">
+                    <StyledLink to="TodoApp">
                       Acessar
                     </StyledLink>
                   </CarouselItem>
                   <CarouselItem>
                     <h2>Quiz App</h2>
-                    <StyledLink to="home/QuizApp">
+                    <StyledLink to="QuizApp">
                       Acessar
                     </StyledLink>
                   </CarouselItem>
