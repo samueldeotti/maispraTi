@@ -1,17 +1,19 @@
 import { useState, useEffect } from 'react';
+import axios from 'axios';
 import { TaskItem, TaskList, TodoEditInput } from './TodoStyle';
 import { Button, Container, Input, Title } from '../UtilsStyle';
 
+const API_URL = 'http://localhost:3000/tasks';
+
 function TodoApp() {
-  const [taskId, setTaskId] = useState(0);
   const [task, setTask] = useState('');
   const [tasks, setTasks] = useState([]);
   const [editingTaskId, setEditingTaskId] = useState(null);
   const [editingTaskText, setEditingTaskText] = useState('');
 
   const fetchTasks = async () => {
-    const tasksList = JSON.parse(localStorage.getItem('tasks') || '[]');
-    setTasks(tasksList);
+    const response = await axios.get(API_URL);
+    setTasks(response.data);
   };
 
   useEffect(() => {
@@ -20,18 +22,16 @@ function TodoApp() {
 
   const addTask = async () => {
     if (task) {
-      const newTask = { id: taskId, text: task };
-      setTasks([...tasks, newTask]);
-      localStorage.setItem('tasks', JSON.stringify([...tasks, task]));
+      const newTask = { text: task };
+      const response = await axios.post(API_URL, newTask);
+      setTasks([...tasks, response.data]);
       setTask('');
-      setTaskId((prevId) => prevId + 1);
     }
   };
 
   const deleteTask = async (id) => {
-    const updatedTasks = tasks.filter((task) => task.id !== id);
-    localStorage.setItem('tasks', JSON.stringify(updatedTasks));
-    setTasks(updatedTasks);
+    await axios.delete(`${API_URL}/${id}`);
+    setTasks(tasks.filter((task) => task.id !== id));
   };
 
   const editTask = (id, text) => {
@@ -40,10 +40,10 @@ function TodoApp() {
   };
 
   const updateTask = async (id) => {
-    const updatedTasks = tasks.map((task) => (task.id === id
-      ? { ...task, text: editingTaskText } : task));
-    setTasks(updatedTasks);
-    localStorage.setItem('tasks', JSON.stringify(updatedTasks));
+    const updatedTask = { text: editingTaskText };
+    await axios.put(`${API_URL}/${id}`, updatedTask);
+    setTasks(tasks.map((task) => (task.id === id
+      ? { ...task, text: editingTaskText } : task)));
     setEditingTaskId(null);
     setEditingTaskText('');
   };
