@@ -18,14 +18,10 @@ import HomeNav from './HomeNav';
 
 function Home({ children }) {
   const [isNavBarOpen, setIsNavBarOpen] = useState(false);
-  const navigate = useNavigate(); // Hook para navegação.
   const [currentComponent, setCurrentComponent] = useState(null);
+  const navigate = useNavigate(); // Hook para navegação.
 
   const path = window.location.pathname;
-  const handleLogout = () => {
-    localStorage.setItem('isAuthenticated', '');
-    navigate('/');
-  };
 
   const toggleNavBar = () => { setIsNavBarOpen(!isNavBarOpen); };
 
@@ -44,7 +40,7 @@ function Home({ children }) {
         <FaBars size={ 24 } color="#2C3E50" />
       </NavBarToggle>
 
-      <HomeNav isNavBarOpen={ isNavBarOpen } onLogout={ handleLogout } />
+      <HomeNav isNavBarOpen={ isNavBarOpen } />
       <MainContent>
         {currentComponent ? (
           <>

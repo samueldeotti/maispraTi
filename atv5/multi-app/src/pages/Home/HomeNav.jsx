@@ -1,9 +1,18 @@
 import React from 'react';
 import { FaGlobeAmericas, FaNetworkWired,
   FaQrcode, FaRegQuestionCircle, FaSearch, FaTasks } from 'react-icons/fa';
+import { useNavigate } from 'react-router-dom';
 import { NavBar, StyledLink } from './HomeStyle';
 
-export default function HomeNav({ isNavBarOpen, handleLogout }) {
+export default function HomeNav({ isNavBarOpen }) {
+  const navigate = useNavigate();
+
+  const handleLogout = () => {
+    console.log('Logging out...');
+    localStorage.setItem('isAuthenticated', '');
+    navigate('/');
+  };
+
   return (
     <NavBar isOpen={ isNavBarOpen }>
       <StyledLink to="/home/QRCodeGenerator">
@@ -33,10 +42,12 @@ export default function HomeNav({ isNavBarOpen, handleLogout }) {
       <button
         onClick={ handleLogout }
         style={ {
+          width: '100%',
           marginTop: '20px',
           color: 'white',
-          backgroundColor: 'transparent',
+          backgroundColor: '#ffffff22',
           border: 'none',
+          alignSelf: 'start',
         } }
       >
         Logout
