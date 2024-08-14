@@ -35,10 +35,6 @@
 
 To stop the application, press `Ctrl + C` in the terminal where the server is running.
 
-### Routes
-
-- /: `Home page`
-- /sobre-nos: `Information about the RBCE`
-- /nossos-projetos: `All RBCE Projects`
-- /linha-do-tempo: `The timeline with the history and projects`
-- /time-de-desenvolvimento: `The development team that designed and built the pages`
+###
+login: admin
+password: password
