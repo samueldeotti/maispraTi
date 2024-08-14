@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { LoginContainer, LoginForm, LoginInput } from './Login';
 import { Button, Title } from '../UtilsStyle';
@@ -9,9 +9,14 @@ function Login() {
 
   const navigate = useNavigate();
 
+  useEffect(() => {
+    if (localStorage.getItem('isAuthenticated') === 'true') navigate('/home');
+  }, [navigate]);
+
   const handleSubmit = (e) => {
     e.preventDefault();
     if (username === 'admin' && password === 'password') {
+      localStorage.setItem('isAuthenticated', true);
       navigate('/home');
     } else {
       alert('Invalid credentials');

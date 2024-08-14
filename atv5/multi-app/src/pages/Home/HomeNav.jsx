@@ -6,27 +6,27 @@ import { NavBar, StyledLink } from './HomeStyle';
 export default function HomeNav({ isNavBarOpen, handleLogout }) {
   return (
     <NavBar isOpen={ isNavBarOpen }>
-      <StyledLink to="QRCodeGenerator">
+      <StyledLink to="/home/QRCodeGenerator">
         <FaQrcode />
         QR Code Generator
       </StyledLink>
-      <StyledLink to="IPAddressFinder">
+      <StyledLink to="/home/IPAddressFinder">
         <FaNetworkWired />
         IP Address Finder
       </StyledLink>
-      <StyledLink to="MovieSearchEngine">
+      <StyledLink to="/home/MovieSearchEngine">
         <FaSearch />
         Movie Search
       </StyledLink>
-      <StyledLink to="TodoApp">
+      <StyledLink to="/home/TodoApp">
         <FaTasks />
         Todo App
       </StyledLink>
-      <StyledLink to="QuizApp">
+      <StyledLink to="/home/QuizApp">
         <FaRegQuestionCircle />
         Quiz App
       </StyledLink>
-      <StyledLink to="LanguageTranslator">
+      <StyledLink to="/home/LanguageTranslator">
         <FaGlobeAmericas />
         Translator
       </StyledLink>
