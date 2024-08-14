@@ -8,12 +8,19 @@ function IPAddressFinder() {
   const [ipData, setIpData] = useState(null);
 
   const findIP = async () => {
+    if (!ip) return;
+
+    if (!ip.match(/^((25[0-5]|2[0-4][0-9]|[0-1]?[0-9][0-9]?)\.){3}(25[0-5]|2[0-4][0-9]|[0-1]?[0-9][0-9]?)$/)) {
+      alert('Invalid IP address');
+      return;
+    }
+
     try {
       const url = `https://ipinfo.io/${ip}/json`;
       const response = await axios.get(url);
       setIpData(response.data);
     } catch (error) {
-      console.error('Error fetching IP address data:', error);
+      alert('Error fetching IP address data:', error);
     }
   };
 

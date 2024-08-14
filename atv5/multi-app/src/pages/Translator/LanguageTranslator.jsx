@@ -5,7 +5,7 @@ import { Button, Container, Input, Title } from '../UtilsStyle';
 
 export default function LanguageTranslator() {
   const [text, setText] = useState('');
-  const [translatedText, setTranslatedText] = useState('');
+  const [translatedText, setTrasnaltedText] = useState('');
 
   const languages = [
     { code: 'en', name: 'English' },
@@ -26,9 +26,10 @@ export default function LanguageTranslator() {
           langpair: `${sourceLang}|${targetLang}`,
         },
       });
-      setTranslatedText(response.data.responseData.translatedText);
+      setTrasnaltedText(response.data.responseData.translatedText);
     } catch (error) {
       console.error('Error translating text:', error);
+      return 'Error translating text';
     }
   };
 
