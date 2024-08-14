@@ -37,4 +37,5 @@ To stop the application, press `Ctrl + C` in the terminal where the server is ru
 
 ###
 login: admin
+
 password: password
